@@ -1,0 +1,17 @@
+.blog-body {
+  max-height: none;
+}
+#editor-plugin {
+  margin: 10px 0px;
+  border: 1px solid gainsboro;
+}
+.tool-header, #editor-plugin .button {
+  display: inline-block;
+  padding: 4px 8px;
+}
+.tool-header {
+  background: #eee;
+}
+#editor-plugin .button:hover {
+  background-color: #eee;
+}

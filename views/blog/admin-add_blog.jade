@@ -1,0 +1,27 @@
+extends ../jade-bootstrap/_bootstrap
+block body
+  -var active='blog'
+  include ../admin/admin-header
+  .container
+    .add-blog.row.col-md-8
+      -var blog = blog || {id: '', blog_title:'', blog_sub_title: '', blog_content: '', blog_tags: '', blog_anchor: ''}
+      -var isAdmin = true
+      form#form-add_blog(action= 'req-add_blog' method= 'post')
+        if ret
+          .form-group
+            if ret.success
+              +alert-x-info(ret.msg)
+            else
+              +alert-x-warning(ret.msg)
+        include ../base/blog-form_body
+        .form-group
+          +checkbox-inline('自动存档')
+        .form-group
+          button.btn.btn-primary#btn-bsubmit(type='button') 提交
+          button.btn.btn-info#btn-bsaveup(type='button') 保存草稿
+          
+append styles
+  link(rel="stylesheet" type='text/css' href='/stylesheets/admin/admin-add_blog.css')
+append scripts
+  script(type='text/javascript' src='/showdown/showdown.min.js')
+  script(type='text/javascript' src= '/javascripts/admin/admin-add_blog.js')

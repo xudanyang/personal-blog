@@ -1,0 +1,20 @@
+each record in records
+  .record
+    .record-panel
+      .record-header
+        a(href= 'record-detail?pid=#{record.pid}')
+          .probId 题目#{record.pid}: 
+          .probTitle #{record.ptitle}
+          
+        .record-extra-info
+          .author-name
+            .glyphicon.glyphicon-user
+            +link('/u?pid=1', '陈斌')(target= '_blank')
+          .probSubDate
+            if record.psubmit_time
+              .add-time
+                span.glyphicon.glyphicon-calendar
+                +date(record.psubmit_time)
+      .record-content
+        .probDesc #{record.pdesc}
+      .record-footer

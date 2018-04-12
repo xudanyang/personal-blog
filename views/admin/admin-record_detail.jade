@@ -1,0 +1,38 @@
+extends ../jade-bootstrap/_bootstrap
+block body
+  -var active='records'
+  include admin-header
+  .container
+    .row.col-md-8
+      form#form-modify_record(method= 'post' action= 'records/req-modify_record' style= 'display:none;')
+        include ../base/record-form_body
+        .form-group
+          button.btn.btn-primary#btn-psubmit(type='submit') 提交
+          button.btn.btn-danger#btn-pcancel(type='button') 取消
+            
+      .record#record-detail
+        if record
+          .record-header
+            .record-pid 题目#{record.pid}:
+            .record-title #{record.ptitle}
+          .record-content
+            .record-desc
+              p= record.pdesc
+            .record-solu
+              p.record-solu-header 解决方案
+              div#record-solu-body= record.psolu
+          .record-footer
+            button.btn.btn-primary#btn-pedit(type='button') 编辑
+            button.btn.btn-danger#btn-pdelete(type='button') 删除
+        else
+          h1 查无此人 
+            +link('javascript:history.back();', '<<返回')
+append scripts
+  script(type= 'text/javascript' src= '/highlight/highlight.pack.js')
+  script(type='text/javascript' src='/showdown/showdown.min.js')
+  script(type= 'text/javascript' src= '/javascripts/base/record-detail.js')
+  script(type= 'text/javascript' src= '/javascripts/admin/admin-record_detail.js')
+
+append styles
+  link(rel='stylesheet' href= '/highlight/styles/default.css')
+  link(rel='stylesheet' href= '/stylesheets/base/record-detail.css')

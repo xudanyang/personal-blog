@@ -1,0 +1,29 @@
+extends ../jade-bootstrap/_bootstrap
+block body
+  -var active='blog'
+  -var isAdmin = true
+  include ../admin/admin-header
+  .container
+    .row.col-md-8
+      if blog
+        div#blog-detail
+          include ../base/base-blog_detail
+        div.blog#blog-edit(style='display: none')
+          form.form#form-edit(action='req-update-blog', method= 'post')
+            include ../base/blog-form_body
+            +btn('提交', 'primary')(id= 'btn-submit')
+            +btn('取消', 'danger')(id= 'btn-cancel')
+        div#form-operation
+          +btn('编辑', 'default')(id= 'btn-edit')
+          +btn('删除', 'danger')(id= 'btn-delete')
+      else 
+        p Empty blog
+append styles
+  link(rel='stylesheet' href= '/highlight/styles/default.css')
+  link(rel= 'stylesheet' href= '/stylesheets/base/blogs-display.css')
+  link(rel= 'stylesheet' href= '/stylesheets/admin/admin-blog_display.css')
+append scripts
+  script(type= 'text/javascript' src= '/highlight/highlight.pack.js')
+  script(type='text/javascript' src='/showdown/showdown.min.js')
+  script(type='text/javascript' src='/javascripts/base/blog-detail.js')
+  script(type='text/javascript' src= '/javascripts/admin/admin-blog_detail.js')

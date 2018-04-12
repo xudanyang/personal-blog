@@ -1,0 +1,14 @@
+body > .container {
+  margin-bottom: 10px;
+  min-height: calc(100vh - 49px);
+}
+#login-panel {
+  background-color: #fff;
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+}
+.title {
+  text-align: center;
+}

@@ -1,0 +1,14 @@
+.blog
+  .blog-header
+    .blog-title
+      a(href= 'blog-detail?id=#{blog.id}')
+        span= blog.blog_title
+  
+    .blog-extra-info
+      .author-name
+        .glyphicon.glyphicon-user
+        +link('/u?pid=' + blog.author_id, blog.author_name)(target= '_blank')
+  .blog-body
+    .blog-content= blog.blog_content
+  .blog-footer
+    block footer

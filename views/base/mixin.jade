@@ -1,0 +1,53 @@
+mixin link(href, name)
+  a(href= href)&attributes(attributes)= name
+mixin date(date, option_prefix)
+  -option_prefix = option_prefix || ''
+  -var date = new Date(date)
+  -var day = date.getDate(), month = date.getMonth() + 1, year = date.getFullYear()
+  -var result = [year, month, day].join('-')
+  -result = option_prefix + result
+  .time= result
+  
+mixin date_time(date, option_prefix)
+  -option_prefix = option_prefix || ''
+  -var date = new Date(date)
+  -var day = date.getDate(), month = date.getMonth() + 1, year = date.getFullYear()
+  -var hh = date.getHours(), min = date.getMinutes(), sec = date.getSeconds()
+  -var result = [year, month, day].join('-') + ' '
+  -result += [hh, min, sec].join(':')
+  -result = option_prefix + result
+  .time= result
+  
+mixin scrolltotop
+  style.
+    #scorll_to_top {
+      width: 64px;
+      height: 64px;
+      position: fixed;
+      bottom: 64px;
+      right: 32px;
+      display: none;
+      text-indent: -9999px;
+      background: url('/img/back-to-top.png') no-repeat;
+      background-color: #fff;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    @media (max-width: 767px) {
+      #scorll_to_top {
+        width: 48px;
+        height: 48px;
+        position: fixed;
+        bottom: 40px;
+        right: 16px;
+        display: none;
+        text-indent: -9999px;
+        background: url('/img/back-to-top.png') no-repeat;
+        background-size: 48px;
+        background-color: transparent;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+    }
+  div#scorll_to_top ^

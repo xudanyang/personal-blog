@@ -1,0 +1,100 @@
+.blog {
+  padding: 10px 15px;
+  background-color: #fff;
+  margin-bottom: 14px;
+  box-shadow: 0px 1px 3px 0px #ccc;
+  border-radius: 4px;
+}
+.blog * {
+/*  max-width: calc(100vw - 70px);*/
+  text-align: justify;
+  border-radius: 0;
+}
+.blog img {
+  max-width: 100%;
+}
+.blog .blog-content {
+  word-break: break-word;
+}
+.blog-header {
+  padding: 16px 0;
+}
+.blog-header * {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+}
+.blog-title {
+  font-size: 24px;
+  border-left: 4px solid #337AB9;
+  padding-left: 8px;
+}
+.blog-title > * {
+  border: 0;
+}
+.blog-title > a:hover {
+  text-decoration: none;
+}
+.blog-sub-title {
+  font-size: 1.4em;
+}
+.blog-extra-info > div{
+  display: inline-block;
+  right: 0;
+}
+.blog-extra-info {
+  text-align: right;
+  float: right;
+  font-size: 14px;
+}
+.blog-extra-info > .blog-date {
+  margin: 0 4px;
+  display: inline-block;
+}
+.blog-date, .blog-date .time, .add-time, .modify-time {
+  display: inline-block;
+}
+.blog-date .time {
+  padding-right: .5em;
+}
+.blog-body {
+  margin-top: 0.5em;
+  display: inline-block;
+  overflow: auto;
+  width: 100%;
+}
+.glyphicon {
+  margin-right: 4px;
+  margin-left: .5em;
+}
+
+.blog-body h2, .blog-body h3, .blog-body h4, .blog-body h5, .blog-body h6 {
+  font-weight: bold;
+}
+.blog-body h2, .blog-body h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.blog-body h4, .blog-body h5, .blog-body h6 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.blog-body ol, .blog-body ul {
+  margin-left: -1.6em;
+}
+.blog-body p {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 767px) {
+  .blog {
+    box-shadow: 0;
+  }
+  #form-operation {
+    margin-top: .6em;
+    margin-bottom: .6em;
+  }
+  #form-operation button {
+    margin: .4em;
+  }
+}

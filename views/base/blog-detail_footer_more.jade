@@ -1,0 +1,4 @@
+extends base-blog_detail.jade
+block footer
+  if blog.blog_anchor > 0
+      a(href= 'blog-detail?id=#{blog.id}#target-hidden') 继续阅读>>

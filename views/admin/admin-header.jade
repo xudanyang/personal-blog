@@ -1,0 +1,19 @@
+include ../base/mixin
+style.
+  @media (min-width: 768px){
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+  }
+
++navbar-static-login('OJDisplay','oj-navbar-header', 'inverse')
+  li(class= "dropdown #{active === 'blog' ? 'active' : ''}")
+    a.dropdown-toggle( href="#", data-toggle="dropdown", role="button", aria-expanded="false" ) 闲记
+      span.caret
+    ul.dropdown-menu(role= 'menu')
+      li: +link('/admin', "所有记录")
+      li.divider
+      li: +link('/admin/add-blog', "新增博文")
+  li(class= "#{active === 'issues' ? 'active' : ''}")
+    +link('/admin/issues',　"反馈列表")

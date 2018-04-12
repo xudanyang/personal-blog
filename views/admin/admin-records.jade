@@ -1,0 +1,13 @@
+extends ../jade-bootstrap/_bootstrap
+append styles
+  link(rel= 'stylesheet' href= '/stylesheets/base/records-display.css')
+block body
+  -var active='records'
+  include admin-header
+  div.container
+    .row.col-md-8
+      .records
+        include ../base/records-all
+        
+append scripts
+  script(type='text/javascript' src= '/javascripts/base/records-display.js')

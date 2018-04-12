@@ -1,0 +1,6 @@
+include ../base/mixin
++navbar-static-login('OJDisplay','oj-navbar-header', 'inverse')
+    li(class= "#{active == 'blog' ? 'active' : ''}")
+      +link('/blog', '闲记')
+    li(class= "#{active == 'ContactMe' ? 'active' : ''}")
+      +link('/contact_adm', '反馈')

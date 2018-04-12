@@ -1,0 +1,19 @@
+extends ../jade-bootstrap/_bootstrap
+block body
+  -var active='blog'
+  include ../admin/admin-header
+  .container
+    .blogs.row.col-md-8
+      if blogs
+        each blog in blogs
+          include ../base/blog-detail_footer_more
+      else
+        h1 Oh...Nothing found.
+
+append styles
+  link(rel= 'stylesheet' href= '/highlight/styles/default.css')
+  link(rel= 'stylesheet' href= '/stylesheets/base/blogs-display.css')
+append scripts
+  script(type= 'text/javascript' src= '/highlight/highlight.pack.js')
+  script(type='text/javascript' src='/showdown/showdown.min.js')
+  script(type='text/javascript' src='/javascripts/base/blog-detail.js')

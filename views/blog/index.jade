@@ -1,0 +1,52 @@
+extends ../jade-bootstrap/_bootstrap
+append styles
+  link(rel='stylesheet', href="/stylesheets/blog.css")
+block body
+  -var active='home'
+  include header
+  .container
+    .blog-header
+      h1.blog-title The Bootstrap Blog
+      p.lead.blog-description The official example template of creating a blog with Bootstrap.
+    .row
+      .col-sm-8.blog-main
+        .blog-post
+          h2.blog-post-title Sample blog post
+          p.blog-post-meta
+            | January 1, 2014 by 
+            a(href='#') Mark
+        nav
+          ul.pager
+            li
+              a(href='#') Previous
+            li
+              a(href='#') Next
+      .col-sm-3.col-sm-offset-1.blog-sidebar
+        .sidebar-module.sidebar-module-inset
+          h4 About
+          p
+            | Etiam porta 
+            em sem malesuada magna
+            |  mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+        .sidebar-module
+          h4 Archives
+          ol.list-unstyled
+            li
+              a(href='#') March 2014
+
+        .sidebar-module
+          h4 Elsewhere
+          ol.list-unstyled
+            li
+              a(href='#') GitHub
+            li
+              a(href='#') Twitter
+            li
+            a(href='#') Facebook
+  footer.blog-footer
+    p
+      | Something of Bin.Chen 
+      a(href='http://weibo.com/2668532465') @EBinChen
+      | .
+    p
+      a(href='#') Back to top

@@ -1,0 +1,94 @@
+
+.record-panel, .records-header {
+  box-shadow: 0px 1px 3px 0px #ddd;
+  padding: 0 14px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  margin-bottom: 1em;
+}
+.records-header {
+  padding-top: 16px;
+}
+.records-header * {
+  height: 30px;
+  line-height: 30px;
+}
+.records-description {
+  font-size: 30px;
+  font-weight: 500;
+}
+.records-appendix {
+  color: #555;
+  height: auto;
+  padding-top: 1em;
+}
+/********单个记录**********/
+.record {
+  margin-bottom: 1.2em;
+}
+.record-header {
+  padding: 16px 0;
+  font-size: 16px;
+}
+.record-header *{
+  font-size: 20px;
+  display: inline-block;
+}
+.author-name, .record-header a > div{
+  padding-right: 6px;
+}
+.glyphicon {
+  padding-right: 2px;
+}
+.record-content {
+  max-height: 7em;
+  overflow: hidden; 
+  display: inline-block;
+}
+.record-content > .probDesc {
+  color: #555;
+  line-height: 1.5em;
+  text-align: justify;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.record-content > .probDesc:hover {
+    cursor: pointer;
+}
+.record-footer {
+  text-align: right;
+  display: block;
+  width: 100%;
+}
+.record-extra-info, .record-footer {
+  font-size: 14px;
+  float: right;
+}
+.record-extra-info *, .record-footer * {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.toggle {
+  float: right;
+}
+.glyphicon {
+  margin-right: 4px;
+  margin-left: .5em;
+}
+
+/******* side bar *******/
+.side-bar-module {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+.side-bar-module > ul {
+  padding-left: 0.4em;
+  list-style: none;
+  margin-left: 0;
+}
+.side-bar-module li {
+  margin-top: .6em;
+}

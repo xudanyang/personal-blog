@@ -1,0 +1,20 @@
+extends jade-bootstrap/_bootstrap
+block body
+  .container
+    .row#login-panel
+      h2.title 登陆
+      form#form-login(action= '/u/login', method= 'post')
+        .form-group
+          label.control-label(for= 'uname') 登录名
+          input.form-control#uname(required name='uname' type='text')
+        .form-group
+          label.control-label(for= 'upass') 密码
+          input.form-control#uname(required name='upass' type='password')
+        .form-group
+          button.btn.btn-default#btn-login_submit(type='submit') 提交
+            
+append styles
+  link(rel="stylesheet", href="/stylesheets/style.css")
+  link(rel="stylesheet", href="/stylesheets/login.css")
+append scripts
+  script(type= 'text/javascript' src= '/javascripts/login.js')

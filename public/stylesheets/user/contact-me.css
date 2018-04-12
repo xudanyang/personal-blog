@@ -1,0 +1,10 @@
+form {
+  box-shadow: 0px 1px 3px 0px #ddd;
+  padding: 10px 15px;
+  background-color: #fff;
+  margin-bottom: 1em;
+  border-radius: 4px;
+}
+#issue {
+  margin-top: .5em;
+}

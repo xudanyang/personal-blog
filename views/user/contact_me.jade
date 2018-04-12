@@ -1,0 +1,22 @@
+extends ../jade-bootstrap/_bootstrap
+block body
+  -var active='ContactMe'
+  include header
+  .container
+    .row.col-md-8
+      form#form-submit_issue(method= 'post' action= 'req_contact_adm')
+        .form-group
+          +alert-info('如果您有任何问题或建议,请不吝赐教~')
+        .form-group
+          label.control-label(for= 'nick_name') 称呼:
+          input.form-control#nick_name(required name= 'nick_name')
+        .form-group
+          label.control-label(for= 'issue') 指导意见:
+          textarea.form-control#issue(rows= '14' wrap= 'soft' required name= 'issue')
+        .form-operation
+          button.btn.btn-primary#btn-submit_issue 提交
+append styles
+  link(rel='stylesheet' href= '/stylesheets/user/contact-me.css')
+  
+append scripts
+  script(type='text/javascript' src= '/javascripts/user/contact-me.js')

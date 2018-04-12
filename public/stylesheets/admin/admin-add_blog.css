@@ -1,0 +1,21 @@
+#form-add_blog {
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px 0px #ddd;
+}
+#editor-plugin {
+  margin: 10px 0px;
+  border: 1px solid gainsboro;
+}
+.tool-header, #editor-plugin .button {
+  display: inline-block;
+  padding: 4px 8px;
+}
+.tool-header {
+  background: #eee;
+}
+#editor-plugin .button:hover {
+  background-color: #eee;
+}

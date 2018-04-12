@@ -1,0 +1,33 @@
+.record-header {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+.record-header, .record-solu-header {
+  border-left: 4px solid #337AB9;
+  padding-left: .5em;
+}
+.record-header div {
+  display: inline-block;
+}
+.record-solu p {
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+.record-desc p {
+  white-space: pre-wrap;
+  background-color: #F0F0F0;
+  padding: 0.5em;
+}
+.record-footer {
+  margin-bottom: 15px;
+}
+#form-modify_record, #record-detail {
+  background: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: .5em;
+}
+#record-detail img {
+  max-width: 100%;
+}

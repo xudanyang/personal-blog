@@ -1,0 +1,16 @@
+.form-group
+  label.control-label(for= 'pid') 问题编号
+  input.form-control#pid(type= 'text' required name= 'pid' value= '#{record.pid}')
+.form-group
+  label.control-label(for= 'ptitle') 问题Title
+  input.form-control#ptitle(type= 'text' required name= 'ptitle' value= '#{record.ptitle}')
+.form-group
+  label.control-label(for= 'pdesc') 问题描述
+  textarea.form-control#pdesc(rows= '20' wrap= 'soft' required name= 'pdesc')= record.pdesc
+.form-group
+  label.control-label(for= 'psolu') 解决方案
+  // textarea.form-control#psolu(rows= '20' wrap= 'soft' required name= 'psolu') #{record.psolu}
+  +tab-list(['编辑', '预览'], 0)
+    +tab('编辑', true)
+      textarea.form-control#psolu(rows= '20' wrap= 'soft' required name= 'psolu')= record.psolu 
+    +tab('预览', false)

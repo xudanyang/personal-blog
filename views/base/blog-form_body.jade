@@ -1,0 +1,25 @@
+.form-group(style= 'display: none')
+  label.control-label(for= 'blog_id') id
+  input.form-control#blog_id(type='text' name='id' value='#{blog.id}' required)
+.form-group
+  label.control-label(for='blog_title') 标题
+  input.form-control.blog_title#blog_title(type='text' name='blog_title' value='#{blog.blog_title}' required)
+.form-group(style='display: none;')
+  label.control-label(for='blog_anchor') 锚点行号
+  input.form-control.blog_title#blog_anchor(type='text' name='blog_anchor' value='#{blog.blog_anchor}')
+.form-group
+  label.control-label(for='blog_title') Tags
+  input.form-control.blog_title#blog_title(type='text' name='blog_tags' value='#{blog.blog_tags}')
+  
+.form-group
+  // label.control-label(for= 'blog_content') 内容
+  +tab-list(['编辑', '预览'], 0)
+    +tab('编辑', true)
+      if isAdmin
+        div#editor-plugin
+          .tool-header 工具栏
+          .button#add-anchor(title= '插入分割锚点(最多一个!)')
+            .glyphicon.glyphicon-option-horizontal
+      textarea.form-control#blog_content(rows= '20' wrap= 'soft' required name= 'blog_content')= blog.blog_content
+    +tab('预览', false)
+      

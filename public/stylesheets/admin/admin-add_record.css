@@ -1,0 +1,13 @@
+#form-add_record {
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px 0px #ddd;
+}
+#tab预览 {
+  min-height: 400px;
+  padding: 6px 12px;
+  border: 1px solid white;
+  box-sizing: content-box;
+}

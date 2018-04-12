@@ -1,0 +1,14 @@
+.issues {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 4px; 
+}
+.issue {
+  margin-bottom: .5em;
+}
+.issue-add-date {
+  float: right;
+}
+.issue-header > div {
+  display: inline-block;
+}

@@ -1,0 +1,24 @@
+extends ../jade-bootstrap/_bootstrap
+block body
+  -var active='issues'
+  include admin-header
+  .container
+    .row.col-md-8
+      .issues
+        if issues
+          each issue in issues
+            .issue
+              .issue-header
+                .issue-user-name= '昵称: ' + issue.nick_name
+                .issue-add-date
+                  +date_time(issue.add_date, '提交时间: ')
+              .issue-content= issue.issue_content
+              .issue-operation
+                
+        else
+          p Nothing Found.
+append styles
+  link(rel="stylesheet" type='text/css' href='/stylesheets/admin/admin-issues.css')
+append scripts
+  // script(type='text/javascript' src='/showdown/showdown.min.js')
+  // script(type='text/javascript' src= '/javascripts/admin/admin-add_record.js')
